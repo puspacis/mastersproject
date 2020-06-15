@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container">
+ <h1>VR</h1>
+
+ <table class="table">
+    {% for row in values %}
+    <tr>
+        {% if row[6] == "VR" %}
+        {% for value in row %}
+        <td>
+            {% if loop.index == 2 %}
+            <a href={{value}} target="_blank">Watch Video</a>
+            {% else %}
+            {{ value }}
+            {% endif %}
+        </td>
+        {% endfor %}
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+<div class="container">
+ <h1>AR</h1>
+
+ <table class="table">
+    {% for row in values %}
+    <tr>
+        {% if row[6] == "MR" %}
+        {% for value in row %}
+        <td>
+            {% if loop.index == 2 %}
+            <a href={{value}} target="_blank">Watch Video</a>
+            {% else %}
+            {{ value }}
+            {% endif %}
+        </td>
+        {% endfor %}
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+
+<div class="container">
+ <h1>MR</h1>
+
+ <table class="table">
+    {% for row in values %}
+    <tr>
+        {% if row[6] == "MR" %}
+        {% for value in row %}
+        <td>
+            {% if loop.index == 2 %}
+            <a href={{value}} target="_blank">Watch Video</a>
+            {% else %}
+            {{ value }}
+            {% endif %}
+        </td>
+        {% endfor %}
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+
+{% endblock content %}
